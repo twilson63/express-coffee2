@@ -1,0 +1,14 @@
+{
+    "name": "express-coffee2"
+  , "version": "0.0.1"
+  , "private": true
+  , "dependencies": {
+      "express": "2.4.7"
+    , "jade": "*"
+    , "coffee-script": "1.x.x"
+    , "stitch": "*"
+  }, 
+    "devDependencies": {
+      "jasmine-node": "*"
+    }
+}
