@@ -21,3 +21,36 @@ node server.js
 
 Want to use the Cloud9 Editor for your project, this template
 is ready to clone and get going.
+
+Just choose clone project and this url.
+
+### Clone
+
+```
+https://github.com/twilson63/express-coffee2.git
+```
+
+### Npm Install
+
+On the Cloud9 Command Line type:
+
+```
+npm install
+```
+
+### Setup your Run Configuration
+
+Choose Run, then Add and fill in the following inputs
+
+```
+name: server
+file path: server.js
+```
+
+Then press the run button!
+
+### Success
+
+Your app should be up and running on Cloud9
+
+
