@@ -6,19 +6,25 @@
         li.active: a(href='/') Home
         li: a(href='/about') About
 
-.container
-  h2 Express Coffee2 Template
-  p 
-    | Express Coffee 2 is a project skeleton to get
-    | started building expressjs web applications
-    | using coffeescript.
-  h2 Features
-  ul
-    li HTML 5 Shim
-    li Twitter Bootstrap CSS
-    li JQuery 1.6.4
-    li Cloud9 Ready
-    li No Compiling
+.container.todos
+  .offset4.span5
+    script(type='text/html').
+      {{view Todos.CreateTodoView id="new-todo" placeholder="What needs to be done?"}}
+
+      {{#collection contentBinding="Todos.todosController" tagName="ul"
+        itemClassBinding="content.isDone"}}
+        {{view SC.Checkbox titleBinding="content.title"
+          valueBinding="content.isDone"}}
+      {{/collection}}
+
+      {{#view Todos.StatsView id="stats"}}
+        {{#view SC.Button classBinding="isActive"
+          target="Todos.todosController"
+          action="clearCompletedTodos"
+          class="btn primary"
+          }}
+          Clear Completed Todos
+        {{/view}}
+        {{remainingString}} remaining
+      {{/view}}
     
-    
- 

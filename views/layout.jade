@@ -15,6 +15,7 @@ head
 
   // CSS
   link(rel="stylesheet", href="/stylesheets/bootstrap.min.css")
+  link(rel="stylesheet", href="/stylesheets/todos.css")
 
   // Favicons
   link(rel='shortcut icon', href='/images/favicon.ico')
@@ -29,7 +30,14 @@ body
   != body
   script(type='text/javascript', src='/application.js')
   script(type='text/javascript', src='http://cdnjs.cloudflare.com/ajax/libs/jquery/1.6.4/jquery.min.js')
+  script(type='text/javascript', src='/javascripts/sproutcore.min.js')
+
   :coffeescript
     # init your client side app here
-    
+    window.Todos = Todos = require 'app'
+    Todos.Todo = require 'todo'
+    Todos.todosController = require 'todosController'
+    Todos.CreateTodoView = require 'todoView'
+    Todos.StatsView = require 'statsView'
+
 | </html>
